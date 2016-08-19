@@ -475,7 +475,7 @@ docson.doc = function(element, schema, ref, baseUrl) {
                                 }
                             }
                             if(content) {
-                                refs[item] = content;
+                                refs[item] = jsonpointer.get(content, segments[1]);
                                 renderBox();
                                 resolveRefsReentrant(content);
                             }
@@ -494,7 +494,7 @@ docson.doc = function(element, schema, ref, baseUrl) {
                                 }
                             }
                             if(content) {
-                                refs[item] = content;
+                                refs[item] = jsonpointer.get(content, segments[1]);
                                 renderBox();
                                 resolveRefsReentrant(content);
                             }
